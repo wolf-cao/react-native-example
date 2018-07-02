@@ -6,22 +6,34 @@ class APIView extends Component {
   render() {
     return (
       <View style={ViewStyles.mainContent}>
-        <Text
-          style={ViewStyles.viewItem}
-          onPress={() => {
-            Actions.button()
-          }}
-        >
-          Button(按钮)
-        </Text>
-        <Text
-          style={ViewStyles.viewItem}
-          onPress={() => {
-            Actions.alert()
-          }}
-        >
-          Alert(提示对话框)
-        </Text>
+        <View style={ViewStyles.viewBox}>
+          <Text
+            style={ViewStyles.viewItem}
+            onPress={() => {
+              Actions.button()
+            }}
+          >
+            Button(按钮)
+          </Text>
+          <Text
+            style={ViewStyles.viewItem}
+            onPress={() => {
+              Actions.alert()
+            }}
+          >
+            Alert(提示对话框)
+          </Text>
+        </View>
+        <View style={ViewStyles.viewBox}>
+          <Text
+            style={ViewStyles.viewItem}
+            onPress={() => {
+              Actions.loading()
+            }}
+          >
+            Loading(加载器)
+          </Text>
+        </View>
       </View>
     )
   }
@@ -34,8 +46,11 @@ const ViewStyles = {
     marginTop: 20,
     marginLeft: 20,
     marginBottom: 20,
-    marginRight: 20,
-    flexDirection: 'row'
+    marginRight: 20
+  },
+  viewBox: {
+    flexDirection: 'row',
+    marginBottom: 20
   },
   viewItem: {
     flex: 1

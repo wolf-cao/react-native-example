@@ -1,6 +1,7 @@
 import API from './index.js'
 import Button from './Button'
 import Alert from './Alert'
+import Loading from './Loading'
 
 export default [
   {
@@ -17,5 +18,10 @@ export default [
     key: 'alert',
     title: '提示对话框',
     component: Alert
+  },
+  {
+    key: 'loading',
+    title: '加载控件',
+    component: Loading
   }
 ]
