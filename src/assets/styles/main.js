@@ -1,6 +1,11 @@
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
+  // 最外层包裹的view，撑满整个屏幕
+  mainWrapper: {
+    flex: 1,
+    backgroundColor: '#ffffff'
+  },
   // default button
   defaultButton: {
     backgroundColor: '#ffffff',

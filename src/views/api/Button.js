@@ -6,30 +6,35 @@ import Styles from '../../assets/styles/main'
 class ButtonStyles extends Component {
   render() {
     return (
-      <View style={viewStyles.mainContent}>
-        <View style={viewStyles.viewBox}>
-          <Button style={Styles.defaultButton}>默认按钮</Button>
-        </View>
-        <View style={viewStyles.viewBox}>
-          <Button style={Styles.blueButton} textStyle={Styles.whiteButtonText}>
-            主要按钮
-          </Button>
-        </View>
-        <View style={viewStyles.viewBox}>
-          <Button
-            style={Styles.successButton}
-            textStyle={Styles.whiteButtonText}
-          >
-            成功按钮
-          </Button>
-        </View>
-        <View style={viewStyles.viewBox}>
-          <Button
-            style={Styles.dangerButton}
-            textStyle={Styles.whiteButtonText}
-          >
-            危险按钮
-          </Button>
+      <View style={Styles.mainWrapper}>
+        <View style={viewStyles.mainContent}>
+          <View style={viewStyles.viewBox}>
+            <Button style={Styles.defaultButton}>默认按钮</Button>
+          </View>
+          <View style={viewStyles.viewBox}>
+            <Button
+              style={Styles.blueButton}
+              textStyle={Styles.whiteButtonText}
+            >
+              主要按钮
+            </Button>
+          </View>
+          <View style={viewStyles.viewBox}>
+            <Button
+              style={Styles.successButton}
+              textStyle={Styles.whiteButtonText}
+            >
+              成功按钮
+            </Button>
+          </View>
+          <View style={viewStyles.viewBox}>
+            <Button
+              style={Styles.dangerButton}
+              textStyle={Styles.whiteButtonText}
+            >
+              危险按钮
+            </Button>
+          </View>
         </View>
       </View>
     )

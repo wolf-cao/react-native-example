@@ -2,6 +2,7 @@ import API from './index.js'
 import Button from './Button'
 import Alert from './Alert'
 import Loading from './Loading'
+import FlatList from './FlatList'
 
 export default [
   {
@@ -23,5 +24,10 @@ export default [
     key: 'loading',
     title: '加载控件',
     component: Loading
+  },
+  {
+    key: 'flatList',
+    title: '简单列表组件',
+    component: FlatList
   }
 ]
