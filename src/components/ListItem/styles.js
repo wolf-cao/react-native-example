@@ -6,6 +6,11 @@ export default {
     paddingBottom: 15,
     flexDirection: 'row'
   },
+  sepLine: {
+    height: 0.6,
+    marginLeft: 10,
+    backgroundColor: '#ddd'
+  },
   listImg: {
     marginRight: 5,
     justifyContent: 'center'
@@ -22,6 +27,9 @@ export default {
   subItemText: {
     fontSize: 16,
     color: '#888888'
+  },
+  fixTitle: {
+    justifyContent: 'center'
   },
   title: {
     fontSize: 16,

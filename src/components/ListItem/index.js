@@ -6,7 +6,7 @@ import ListStyle from './styles'
 
 class ListItem extends Component {
   render() {
-    const { data, isLink } = this.props
+    const { data, isLink, mapping } = this.props
 
     // render arrow link icon
     const arrowLinkIcon = isLink && (
@@ -15,20 +15,27 @@ class ListItem extends Component {
       </View>
     )
 
+    // render subtitle
+    const subTitleItem = mapping.subTitle && (
+      <Text style={ListStyle.subTitle}>{data[mapping.subTitle]}</Text>
+    )
+
     return (
       <View style={ListStyle.listItem}>
         <View style={ListStyle.listImg}>
           <Image
-            source={{ uri: data.imgIcon }}
+            source={{ uri: data[mapping.imgIcon] }}
             style={{ width: 30, height: 30 }}
           />
         </View>
-        <View style={ListStyle.mainItem}>
-          <Text style={ListStyle.title}>{data.title}</Text>
-          <Text style={ListStyle.subTitle}>{data.subTitle}</Text>
+        <View
+          style={[ListStyle.mainItem, !mapping.subTitle && ListStyle.fixTitle]}
+        >
+          <Text style={ListStyle.title}>{data[mapping.title]}</Text>
+          {subTitleItem}
         </View>
         <View style={ListStyle.subItem}>
-          <Text style={ListStyle.subItemText}>{data.description}</Text>
+          <Text style={ListStyle.subItemText}>{data[mapping.description]}</Text>
         </View>
         {arrowLinkIcon}
       </View>
@@ -40,9 +47,16 @@ export default ListItem
 
 ListItem.propTypes = {
   data: PropTypes.object,
-  isLink: PropTypes.bool
+  isLink: PropTypes.bool,
+  mapping: PropTypes.object
 }
 
 ListItem.defaultProps = {
-  isLink: true
+  isLink: false,
+  mapping: {
+    imgIcon: '',
+    title: '',
+    subTitle: '',
+    description: ''
+  }
 }
