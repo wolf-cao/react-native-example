@@ -1,37 +1,51 @@
 import React, { Component } from 'react'
-import { View, FlatList } from 'react-native'
-import ListItem from '../../components/ListItem/index'
-import SeparatorLine from '../../components/ListItem/separatorLine'
+import { View, Alert } from 'react-native'
+import ListView from '../../components/ListView/index'
 import Styles from '../../assets/styles/main'
 
 const exampleData = [
   {
     fundName: '标题文字',
-    securityName: '副标题描述',
+    securityName: '副标题描述333',
     fundImage: 'https://avatars0.githubusercontent.com/u/38270394?s=40&v=4',
     message: '说明文字说明文字'
   },
   {
     fundName: '标题文字',
-    securityName: '副标题描述',
+    securityName: '副标题描述1',
     fundImage: 'https://avatars0.githubusercontent.com/u/38270394?s=40&v=4',
     message: '说明文字说明文字'
   },
   {
     fundName: '标题文字',
-    securityName: '副标题描述',
+    securityName: '副标题描述2',
     fundImage: 'https://avatars0.githubusercontent.com/u/38270394?s=40&v=4',
     message: '说明文字说明文字'
   },
   {
     fundName: '标题文字',
-    securityName: '副标题描述',
+    securityName: '副标题描述3',
     fundImage: 'https://avatars0.githubusercontent.com/u/38270394?s=40&v=4',
     message: '说明文字说明文字'
   }
 ]
 
 class FlatListStyles extends Component {
+  pressEvent = item => {
+    Alert.alert(
+      '提示',
+      `${item.securityName}`,
+      [
+        {
+          text: '取消',
+          onPress: () => console.log('Cancel Pressed'),
+          style: 'cancel'
+        },
+        { text: '确定', onPress: () => console.log('OK Pressed') }
+      ],
+      { cancelable: false }
+    )
+  }
   render() {
     const mapping = {
       imgIcon: 'fundImage',
@@ -42,12 +56,11 @@ class FlatListStyles extends Component {
 
     return (
       <View style={Styles.mainWrapper}>
-        <FlatList
+        <ListView
           data={exampleData}
-          renderItem={({ item }) => (
-            <ListItem data={item} isLink={true} mapping={mapping} />
-          )}
-          ItemSeparatorComponent={SeparatorLine}
+          mapping={mapping}
+          isLink={true}
+          onPress={this.pressEvent}
         />
       </View>
     )
