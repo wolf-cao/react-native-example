@@ -53,25 +53,16 @@ class APIView extends Component {
             >
               Picker(选择器)
             </Text>
-            {/* <Text
-              style={ViewStyles.viewItem}
-              onPress={() => {
-                Actions.cameraRoll()
-              }}
-            >
-              CamareRoll(相机控制)
-            </Text> */}
           </View>
           <View style={ViewStyles.viewBox}>
-            {/* <Text
+            <Text
               style={ViewStyles.viewItem}
               onPress={() => {
-                Actions.tabBar()
+                Actions.modal()
               }}
             >
-              TableBar(选项卡)
-            </Text> */}
-      
+              Modal(弹出框)
+            </Text>
           </View>
         </View>
       </View>

@@ -6,6 +6,7 @@ import FlatList from './FlatList'
 import Picker from './Picker'
 import CameraRoll from './CameraRoll'
 import TabBar from './TabBar'
+import Modal from './Modal'
 
 export default [
   {
@@ -47,5 +48,10 @@ export default [
     key: 'tabBar',
     title: '选项卡',
     component: TabBar
+  },
+  {
+    key: 'modal',
+    title: '弹出框',
+    component: Modal
   }
 ]
