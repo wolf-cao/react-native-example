@@ -3,6 +3,9 @@ import Button from './Button'
 import Alert from './Alert'
 import Loading from './Loading'
 import FlatList from './FlatList'
+import Picker from './Picker'
+import CameraRoll from './CameraRoll'
+import TabBar from './TabBar'
 import Modal from './Modal'
 import DatePicker from './DatePicker'
 
@@ -31,6 +34,21 @@ export default [
     key: 'flatList',
     title: '简单列表组件',
     component: FlatList
+  },
+  {
+    key: 'picker',
+    title: '选择器',
+    component: Picker
+  },
+  {
+    key: 'cameraRoll',
+    title: '相册控制',
+    component: CameraRoll
+  },
+  {
+    key: 'tabBar',
+    title: '选项卡',
+    component: TabBar
   },
   {
     key: 'modal',

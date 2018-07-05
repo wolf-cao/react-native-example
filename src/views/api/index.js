@@ -48,6 +48,16 @@ class APIView extends Component {
             <Text
               style={ViewStyles.viewItem}
               onPress={() => {
+                Actions.picker()
+              }}
+            >
+              Picker(选择器)
+            </Text>
+          </View>
+          <View style={ViewStyles.viewBox}>
+            <Text
+              style={ViewStyles.viewItem}
+              onPress={() => {
                 Actions.modal()
               }}
             >
