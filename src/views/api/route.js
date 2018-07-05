@@ -4,6 +4,7 @@ import Alert from './Alert'
 import Loading from './Loading'
 import FlatList from './FlatList'
 import Modal from './Modal'
+import DatePicker from './DatePicker'
 
 export default [
   {
@@ -35,5 +36,10 @@ export default [
     key: 'modal',
     title: '弹出框',
     component: Modal
+  },
+  {
+    key: 'datePicker',
+    title: '时间控件',
+    component: DatePicker
   }
 ]

@@ -53,6 +53,14 @@ class APIView extends Component {
             >
               Modal(弹出框)
             </Text>
+            <Text
+              style={ViewStyles.viewItem}
+              onPress={() => {
+                Actions.datePicker()
+              }}
+            >
+              DatePicker(时间选择器)
+            </Text>
           </View>
         </View>
       </View>
