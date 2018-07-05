@@ -10,7 +10,7 @@ class LoadingStyles extends Component {
     }
   }
   clickToLoading = () => {
-    this.setState(
+    this.setState( 
       {
         loading: true
       },
@@ -26,7 +26,7 @@ class LoadingStyles extends Component {
   render() {
     const { clickToLoading } = this
     const { loading } = this.state
-
+    
     return (
       <View style={ViewStyles.mainContent}>
         <Text onPress={clickToLoading}>点击出现加载进度</Text>

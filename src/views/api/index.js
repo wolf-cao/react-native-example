@@ -44,6 +44,35 @@ class APIView extends Component {
               FlatList(简单列表组件)
             </Text>
           </View>
+          <View style={ViewStyles.viewBox}>
+            <Text
+              style={ViewStyles.viewItem}
+              onPress={() => {
+                Actions.picker()
+              }}
+            >
+              Picker(选择器)
+            </Text>
+            {/* <Text
+              style={ViewStyles.viewItem}
+              onPress={() => {
+                Actions.cameraRoll()
+              }}
+            >
+              CamareRoll(相机控制)
+            </Text> */}
+          </View>
+          <View style={ViewStyles.viewBox}>
+            {/* <Text
+              style={ViewStyles.viewItem}
+              onPress={() => {
+                Actions.tabBar()
+              }}
+            >
+              TableBar(选项卡)
+            </Text> */}
+      
+          </View>
         </View>
       </View>
     )
