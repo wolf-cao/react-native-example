@@ -44,6 +44,16 @@ class APIView extends Component {
               FlatList(简单列表组件)
             </Text>
           </View>
+          <View style={ViewStyles.viewBox}>
+            <Text
+              style={ViewStyles.viewItem}
+              onPress={() => {
+                Actions.modal()
+              }}
+            >
+              Modal(弹出框)
+            </Text>
+          </View>
         </View>
       </View>
     )

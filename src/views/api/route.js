@@ -3,6 +3,7 @@ import Button from './Button'
 import Alert from './Alert'
 import Loading from './Loading'
 import FlatList from './FlatList'
+import Modal from './Modal'
 
 export default [
   {
@@ -29,5 +30,10 @@ export default [
     key: 'flatList',
     title: '简单列表组件',
     component: FlatList
+  },
+  {
+    key: 'modal',
+    title: '弹出框',
+    component: Modal
   }
 ]
