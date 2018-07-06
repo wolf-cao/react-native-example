@@ -19,20 +19,24 @@ class TableStyles extends Component {
     }
 
     return (
-      <View style={Styles.wrapper}>
-        <TableHeader data={data} rows={children} />
-        <View style={Styles.tbody}>
-          <ScrollView>
-            {tdRow(item => {
-              // 每一个数据列
-              return React.Children.map(children, child => {
-                return React.cloneElement(child, {
-                  data: item
-                })
-              })
-            })}
-          </ScrollView>
-        </View>
+      <View style={{ flex: 1, flexDirection: 'row' }}>
+        <ScrollView horizontal={true} style={{ flex: 1 }}>
+          <View style={Styles.wrapper}>
+            <TableHeader data={data} rows={children} />
+            <View style={Styles.tbody}>
+              <ScrollView>
+                {tdRow(item => {
+                  // 每一个数据列
+                  return React.Children.map(children, child => {
+                    return React.cloneElement(child, {
+                      data: item
+                    })
+                  })
+                })}
+              </ScrollView>
+            </View>
+          </View>
+        </ScrollView>
       </View>
     )
   }

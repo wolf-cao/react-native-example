@@ -1,6 +1,5 @@
 export default {
   wrapper: {
-    flexDirection: 'column',
     flex: 1
   },
   theader: {
@@ -11,7 +10,6 @@ export default {
     borderBottomColor: '#ebebeb'
   },
   thItem: {
-    flex: 1,
     paddingTop: 5,
     paddingBottom: 10,
     paddingLeft: 10,
@@ -32,7 +30,6 @@ export default {
     justifyContent: 'center'
   },
   tdCol: {
-    flex: 1,
     justifyContent: 'center',
     paddingLeft: 10,
     paddingRight: 10,

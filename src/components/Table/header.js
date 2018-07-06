@@ -12,7 +12,10 @@ class TableHeader extends Component {
     const { rows } = this.props
     return rows.map((item, index) => {
       return (
-        <View style={Styles.thItem} key={index}>
+        <View
+          style={[Styles.thItem, { width: Number(item.props.width) }]}
+          key={index}
+        >
           <Text style={Styles.thText}>{item.props.label}</Text>
         </View>
       )

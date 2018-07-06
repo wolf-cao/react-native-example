@@ -9,10 +9,10 @@ import Styles from './styles'
 
 class ColumnItem extends Component {
   render() {
-    const { label, prop, data } = this.props
+    const { prop, data, width } = this.props
 
     return (
-      <View style={Styles.tdCol}>
+      <View style={[Styles.tdCol, { width: Number(width) }]}>
         <Text style={Styles.tdText}>{data[prop]}</Text>
       </View>
     )
@@ -22,7 +22,8 @@ class ColumnItem extends Component {
 ColumnItem.propTypes = {
   label: PropTypes.string,
   prop: PropTypes.string,
-  data: PropTypes.object
+  data: PropTypes.object,
+  width: PropTypes.string
 }
 
 export default ColumnItem
