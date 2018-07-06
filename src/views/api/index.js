@@ -72,6 +72,16 @@ class APIView extends Component {
               DatePicker(时间选择器)
             </Text>
           </View>
+          <View style={ViewStyles.viewBox}>
+            <Text
+              style={ViewStyles.viewItem}
+              onPress={() => {
+                Actions.table()
+              }}
+            >
+              Table(表格控件)
+            </Text>
+          </View>
         </View>
       </View>
     )

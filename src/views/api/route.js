@@ -8,6 +8,7 @@ import CameraRoll from './CameraRoll'
 import TabBar from './TabBar'
 import Modal from './Modal'
 import DatePicker from './DatePicker'
+import Table from './Table'
 
 export default [
   {
@@ -59,5 +60,10 @@ export default [
     key: 'datePicker',
     title: '时间控件',
     component: DatePicker
+  },
+  {
+    key: 'table',
+    title: '表格控件',
+    component: Table
   }
 ]
