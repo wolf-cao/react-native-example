@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/Feather'
 import { View, Text, Image } from 'react-native'
 import ListStyle from './styles'
 
@@ -11,7 +11,7 @@ class ListItem extends Component {
     // render arrow link icon
     const arrowLinkIcon = isLink && (
       <View style={ListStyle.listArrowIcon}>
-        <Icon name="chevron-right" size={16} color="#c8c8cd" />
+        <Icon name="chevron-right" size={18} color="#c8c8cd" />
       </View>
     )
 

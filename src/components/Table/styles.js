@@ -13,11 +13,27 @@ export default {
     paddingTop: 5,
     paddingBottom: 10,
     paddingLeft: 10,
-    paddingRight: 10
+    paddingRight: 10,
+    flexDirection: 'row'
   },
   thText: {
     fontSize: 12,
     color: '#909399'
+  },
+  thSort: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'flex-end'
+  },
+  sortAsc: {
+    position: 'absolute',
+    right: 0,
+    top: 0
+  },
+  sortDesc: {
+    position: 'absolute',
+    right: 0,
+    top: 0
   },
   tbody: {
     flex: 1
