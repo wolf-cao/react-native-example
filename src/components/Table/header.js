@@ -37,18 +37,20 @@ class TableHeader extends Component {
           key={index}
         >
           <Text style={Styles.thText}>{item.props.label}</Text>
-          <View style={Styles.thSort}>
-            <TouchableOpacity
-              activeOpacity={0.5}
-              onPress={() => {
-                handleSortBy(item.props.prop)
-              }}
-            >
-              <Icon name="unsorted" size={14} color="#c8c8cd" />
-              {item.props.prop === sortName && sortAscItem}
-              {item.props.prop === sortName && sortDescItem}
-            </TouchableOpacity>
-          </View>
+          {item.props.sortable && (
+            <View style={Styles.thSort}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                onPress={() => {
+                  handleSortBy(item.props.prop)
+                }}
+              >
+                <Icon name="unsorted" size={14} color="#c8c8cd" />
+                {item.props.prop === sortName && sortAscItem}
+                {item.props.prop === sortName && sortDescItem}
+              </TouchableOpacity>
+            </View>
+          )}
         </View>
       )
     })
