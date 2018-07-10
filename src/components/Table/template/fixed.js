@@ -1,19 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
+import BaseClass from './base'
 import { View, ScrollView, TouchableOpacity } from 'react-native'
 import PropTypes from 'prop-types'
-import Utils from '../../../common/utils'
 import TableHeader from '../header'
 import Styles from '../styles'
 
-class FixedTable extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      sortName: '',
-      sortBy: '',
-      sourceData: this.props.data
-    }
-  }
+class FixedTable extends BaseClass {
   scrollEvent = () => {
     const RCTUIManager = require('NativeModules').UIManager
     const sv = this.refs.scrollView
@@ -21,68 +13,10 @@ class FixedTable extends Component {
       this.refs.fixTable.scrollTo({ x: 0, y: 88 - data[5], animated: true })
     })
   }
-  getSortObject = prop => {
-    // 点击的是相同的字段
-    if (this.state.sortName === prop) {
-      let sortBy = ''
-      if (!this.state.sortBy) {
-        sortBy = 'asc'
-      } else if (this.state.sortBy === 'asc') {
-        sortBy = 'desc'
-      } else {
-        sortBy = ''
-      }
-      this.setState(
-        {
-          sortBy
-        },
-        () => {
-          const { sourceData, sortName, sortBy } = this.state
-          const sortData = Utils.sortBy(sourceData, sortName, sortBy)
-          this.setState({
-            sourceData: !sortBy ? this.props.data : sortData
-          })
-        }
-      )
-      return
-    }
-
-    // 点击的是不同的字段
-    this.setState(
-      {
-        sortName: prop
-      },
-      () => {
-        this.setState(
-          {
-            sortBy: 'asc'
-          },
-          () => {
-            const { sourceData, sortName, sortBy } = this.state
-            const sortData = Utils.sortBy(sourceData, sortName, sortBy)
-            this.setState({
-              sourceData: sortData
-            })
-          }
-        )
-      }
-    )
-  }
   render() {
-    const { scrollEvent, getSortObject } = this
+    const { scrollEvent, getSortObject, _renderTdRows } = this
     const { sortName, sortBy, sourceData } = this.state
     const { children } = this.props
-
-    const tdRow = returnElement => {
-      // 每一个数据行
-      return sourceData.map((item, index) => {
-        return (
-          <View style={Styles.tdList} key={index}>
-            {returnElement(item)}
-          </View>
-        )
-      })
-    }
 
     const fixedColumns = children.filter(item => item.props.fixed)
     const unFixedColumns = children.filter(item => !item.props.fixed)
@@ -99,14 +33,7 @@ class FixedTable extends Component {
           />
           <TouchableOpacity activeOpacity={1}>
             <ScrollView showsVerticalScrollIndicator={false} ref="fixTable">
-              {tdRow(item => {
-                // 每一个数据列
-                return React.Children.map(fixedColumns, child => {
-                  return React.cloneElement(child, {
-                    data: item
-                  })
-                })
-              })}
+              {_renderTdRows(fixedColumns)}
             </ScrollView>
           </TouchableOpacity>
         </View>
@@ -121,14 +48,7 @@ class FixedTable extends Component {
             />
             <View style={Styles.tbody}>
               <ScrollView onScroll={scrollEvent} ref="scrollView">
-                {tdRow(item => {
-                  // 每一个数据列
-                  return React.Children.map(unFixedColumns, child => {
-                    return React.cloneElement(child, {
-                      data: item
-                    })
-                  })
-                })}
+                {_renderTdRows(unFixedColumns)}
               </ScrollView>
             </View>
           </View>
