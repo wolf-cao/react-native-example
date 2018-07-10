@@ -81,6 +81,14 @@ class APIView extends Component {
             >
               Table(表格控件)
             </Text>
+            <Text
+              style={ViewStyles.viewItem}
+              onPress={() => {
+                Actions.tableFix()
+              }}
+            >
+              Table-Fix(表格控件)
+            </Text>
           </View>
         </View>
       </View>

@@ -9,6 +9,7 @@ import TabBar from './TabBar'
 import Modal from './Modal'
 import DatePicker from './DatePicker'
 import Table from './Table'
+import TableFix from './TableFix'
 
 export default [
   {
@@ -65,5 +66,10 @@ export default [
     key: 'table',
     title: '表格控件',
     component: Table
+  },
+  {
+    key: 'tableFix',
+    title: '表格控件-fix',
+    component: TableFix
   }
 ]

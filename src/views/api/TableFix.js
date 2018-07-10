@@ -9,11 +9,12 @@ class TableStyles extends Component {
   render() {
     return (
       <View style={Styles.mainWrapper}>
-        <TableView data={SourceData}>
+        <TableView data={SourceData} type="fix">
           <TableColumnItem
             label="基金名称"
             prop="fundName"
             width="120"
+            fixed={true}
             sortable={true}
           />
           <TableColumnItem label="投资标的" prop="securityName" width="150" />
