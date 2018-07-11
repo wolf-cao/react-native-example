@@ -19,14 +19,14 @@ class TableHeader extends Component {
     // sort asc element
     const sortAscItem = sortBy === 'asc' && (
       <View style={Styles.sortAsc}>
-        <Icon name="sort-asc" size={14} color="#ffcc00" />
+        <Icon name="sort-asc" size={14} color="#409EFF" />
       </View>
     )
 
     // sort desc element
     const sortDescItem = sortBy === 'desc' && (
       <View style={Styles.sortDesc}>
-        <Icon name="sort-desc" size={14} color="#ffcc00" />
+        <Icon name="sort-desc" size={14} color="#409EFF" />
       </View>
     )
 

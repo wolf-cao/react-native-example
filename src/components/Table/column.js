@@ -8,12 +8,25 @@ import Styles from './styles'
  */
 
 class ColumnItem extends Component {
+  renderCol = item => {
+    const { children } = this.props
+    // 每一个数据列
+    return React.cloneElement(children, { ...item })
+  }
   render() {
-    const { prop, data, width } = this.props
+    const { renderCol } = this
+    const { prop, data, width, children } = this.props
 
+    if (!children) {
+      return (
+        <View style={[Styles.tdCol, { width: Number(width) }]}>
+          <Text style={Styles.tdText}>{data[prop]}</Text>
+        </View>
+      )
+    }
     return (
       <View style={[Styles.tdCol, { width: Number(width) }]}>
-        <Text style={Styles.tdText}>{data[prop]}</Text>
+        {renderCol(data)}
       </View>
     )
   }

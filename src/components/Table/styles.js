@@ -10,7 +10,7 @@ export default {
     borderBottomColor: '#ebebeb'
   },
   thItem: {
-    paddingTop: 5,
+    paddingTop: 10,
     paddingBottom: 10,
     paddingLeft: 10,
     paddingRight: 10,
@@ -23,16 +23,17 @@ export default {
   thSort: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'flex-end'
+    paddingLeft: 10,
+    paddingTop: 2
   },
   sortAsc: {
     position: 'absolute',
-    right: 0,
+    left: 0,
     top: 0
   },
   sortDesc: {
     position: 'absolute',
-    right: 0,
+    left: 0,
     top: 0
   },
   tbody: {
