@@ -10,7 +10,7 @@ class FixedTable extends BaseClass {
     const RCTUIManager = require('NativeModules').UIManager
     const sv = this.refs.scrollView
     RCTUIManager.measure(sv.getInnerViewNode(), (...data) => {
-      this.refs.fixTable.scrollTo({ x: 0, y: 88 - data[5], animated: true })
+      this.refs.fixTable.scrollTo({ x: 0, y: 93 - data[5], animated: true })
     })
   }
   render() {
