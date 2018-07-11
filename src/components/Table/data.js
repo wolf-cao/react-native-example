@@ -10,7 +10,7 @@ export default [
   },
   {
     fundName: '理成资产26号',
-    securityName: '600006 东风汽车',
+    securityName: '610006 东风汽车',
     tradeType: '买入',
     cost: '32元',
     amount: '2000股',
@@ -19,7 +19,7 @@ export default [
   },
   {
     fundName: '理成资产36号',
-    securityName: '600006 东风汽车',
+    securityName: '650006 东风汽车',
     tradeType: '买入',
     cost: '33元',
     amount: '2000股',
@@ -28,7 +28,7 @@ export default [
   },
   {
     fundName: '理成资产46号',
-    securityName: '600006 东风汽车',
+    securityName: '630006 东风汽车',
     tradeType: '买入',
     cost: '34元',
     amount: '2000股',
@@ -37,7 +37,7 @@ export default [
   },
   {
     fundName: '理成资产56号',
-    securityName: '600006 东风汽车',
+    securityName: '670006 东风汽车',
     tradeType: '买入',
     cost: '35元',
     amount: '2000股',
@@ -46,7 +46,7 @@ export default [
   },
   {
     fundName: '理成资产66号',
-    securityName: '600006 东风汽车',
+    securityName: '620006 东风汽车',
     tradeType: '买入',
     cost: '36元',
     amount: '2000股',
