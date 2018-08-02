@@ -12,6 +12,11 @@ class ButtonStyles extends Component {
             <Button style={Styles.defaultButton}>默认按钮</Button>
           </View>
           <View style={viewStyles.viewBox}>
+            <Button style={Styles.defaultButton} isDisabled={true}>
+              禁用按钮
+            </Button>
+          </View>
+          <View style={viewStyles.viewBox}>
             <Button
               style={Styles.blueButton}
               textStyle={Styles.whiteButtonText}
