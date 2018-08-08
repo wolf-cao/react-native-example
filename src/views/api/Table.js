@@ -18,6 +18,18 @@ class FundNameItem extends Component {
   }
 }
 
+// 自定义买卖类型列
+class TradeTypeItem extends Component {
+  render() {
+    const { tradeType } = this.props
+    return (
+      <View>
+        <Text style={{ color: 'red', fontSize: 12 }}>{tradeType}</Text>
+      </View>
+    )
+  }
+}
+
 // table元素
 class TableStyles extends Component {
   render() {
@@ -33,7 +45,9 @@ class TableStyles extends Component {
             <FundNameItem />
           </TableColumnItem>
           <TableColumnItem label="投资标的" prop="securityName" width="150" />
-          <TableColumnItem label="买卖类型" prop="tradeType" width="100" />
+          <TableColumnItem label="买卖类型" prop="tradeType" width="100">
+            <TradeTypeItem />
+          </TableColumnItem>
           <TableColumnItem
             label="成本价"
             prop="cost"
