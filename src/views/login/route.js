@@ -11,7 +11,6 @@ const loginRightButtonEvent = () => {
 
 export default [
   {
-    initial: true,
     key: 'login',
     title: 'Login',
     rightTitle: 'API',

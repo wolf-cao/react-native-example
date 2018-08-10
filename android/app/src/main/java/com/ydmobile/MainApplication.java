@@ -3,6 +3,7 @@ package com.ydmobile;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import io.realm.react.RealmReactPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import com.reactnative.ivpusic.imagepicker.PickerPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
@@ -24,7 +25,8 @@ public class MainApplication extends Application implements ReactApplication {
 
     @Override
     protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(new MainReactPackage(), new SplashScreenReactPackage(), new PickerPackage(),
+      return Arrays.<ReactPackage>asList(new MainReactPackage(),
+            new RealmReactPackage(), new SplashScreenReactPackage(), new PickerPackage(),
           new VectorIconsPackage());
     }
 
